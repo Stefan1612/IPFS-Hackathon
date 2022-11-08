@@ -6,7 +6,7 @@ The NFT Marketplace is currently running and fully functional on Goerli at
 
 2. NFT:
 
-The Website is online and running at [Website](https://gilded-gecko-470388.netlify.app/)
+The Website is online and running at [Website]()
 
 ## Any questions? Contact me
 
@@ -15,7 +15,7 @@ Discord: SimpleBlock#6604
 
 ## Biconomy
 
-### Demo videos: 
+### Demo videos:
 
 NFT Marketplace: hhttps://www.youtube.com/watch?v=zYdKS_B3RJo
 
@@ -28,17 +28,7 @@ Tokens from one network to another
 
 Biconomy docs: https://docs.biconomy.io/products/hyphen-instant-cross-chain-transfers/hyphen-widget
 
-Added at: [Code](https://github.com/Stefan1612/Bico-Hackathon-NFT-Marketplace/blob/master/src/Components/CrossChainTransfer.js)
-
-### Gasless Transactions 
-
-This NFT allows party gasless NFT minting,selling and buying (mintNFT(), sellNFT(), buyNFT()) thanks to biconomy (only the marketplace itself and not NFT contract is currently gasless, because of the nature of my contract setup only the second transaction you need to accept for minting, etc... will be gasless (you still have to pay 0.002 eth fee to the contract to the owner when minting))
-
-Biconomy docs: https://docs.biconomy.io/products/enable-gasless-transactions/choose-an-approach-to-enable-gasless/eip-2771
-
-Added at: [Code](https://github.com/Stefan1612/Bico-Hackathon-NFT-Marketplace/blob/master/src/App.js)
-
-And all contracts modified accordingly: [Code](https://github.com/Stefan1612/Bico-Hackathon-NFT-Marketplace/tree/master/contracts)
+Added at: [Code]()
 
 ## Approach
 
@@ -62,13 +52,11 @@ This DApp allows you mint, buy and sell NFT's from the "Ape Family" contract.
 - sell, buy with NFT Marketplace contract
 - mint, transfer and set TokenURI with NFT contract
 
-
 ## Covalent API
 
-Covalent was used to generate: [this whole section](https://github.com/Stefan1612/Covalent-NFT-Marketplace/blob/master/src/Components/Transfers.js)
+Covalent was used to generate: [this whole section]()
 
 The actual API call
-https://github.com/Stefan1612/Covalent-NFT-Marketplace/blob/5aa24e0f444a21256bf8e687a885b9cf8b9fb640/src/Components/Transfers.js#L30-L34
 
 ## License
 

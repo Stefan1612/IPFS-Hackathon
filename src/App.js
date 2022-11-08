@@ -36,38 +36,6 @@ import { Biconomy } from "@biconomy/mexa";
 function App() {
   //contract addresses
 
-  /// BICONOMY
-
-  const [biconomy, setBiconomy] = useState("");
-  /*  let bicoEthersProvider = ""; */
-
-  async function setUpBiconomy() {
-    let tempBiconomy = new Biconomy(window.ethereum, {
-      apiKey: process.env.REACT_APP_BICONOMY_API_KEY,
-
-      /* strictMode: true, */
-      debug: false,
-      contractAddresses: [ContractAddress[5].NftMarketPlace],
-      /* erc20ForwarderAddress: "0xE041608922d06a4F26C0d4c27d8bCD01daf1f792", */
-    });
-
-    await tempBiconomy.init();
-    setBiconomy(tempBiconomy);
-  }
-
-  /* async function callGaslessWithdraw() {
-    bicoEthersProvider = biconomy.ethersProvider; */ /* let bicoEthersProvider =
-      new ethers.providers.Web3Provider(biconomy); */
-  /*  let signer = bicoEthersProvider.getSigner();
-    const bicoContract = new ethers.Contract(
-      ContractAddress[5].NftMarketPlace,
-      NftMarketPlace.abi,
-      signer
-    );
-    await bicoContract.withdrawContractsProfits({ gasLimit: 1000000 }); */
-  /* await signerContractMarket.withdrawContractsProfits({ gasLimit: 100000 }); */
-  /*  } */
-
   //handle State
   const [account, setAccount] = useState("");
   // const [nfts, setNfts] = useState([]);
@@ -124,7 +92,7 @@ function App() {
   //side loaded
   useEffect(() => {
     loadOnSaleNFTs();
-    setUpBiconomy();
+
     if (provider) {
       FirstLoadGettingAccount(); // user provider
       gettingNetworkNameChainId(); // user provider
@@ -296,14 +264,14 @@ function App() {
     let price = marketItem.price;
     price = ethers.utils.parseEther(price);
     /// BICONOMY GASLESS TX -----------------------------------------------------------
-    let bicoEthersProvider = biconomy.ethersProvider;
+    /*   let bicoEthersProvider = biconomy.ethersProvider;
 
     let BicoProvider = biconomy.provider;
 
     const bicoContract = new ethers.Contract(
       ContractAddress[5].NftMarketPlace,
       NftMarketPlace.abi,
-      /* biconomy.ethersProvider */
+     
       bicoEthersProvider.getSigner()
     );
 
@@ -326,16 +294,16 @@ function App() {
     };
 
     await BicoProvider.send("eth_sendTransaction", [txParams]);
-
+ */
     /// -----------------------------------------------------------------------------
-    /*  let tx = await signerContractMarket.buyMarketToken(
+    let tx = await signerContractMarket.buyMarketToken(
       id,
       ContractAddress[5].NFT,
       {
         value: price,
       }
     );
-    await tx.wait(); */
+    await tx.wait();
     loadOwnNFTs();
     loadOnSaleNFTs();
   }
@@ -359,14 +327,14 @@ function App() {
       true
     );
     /// BICONOMY GASLESS TX -----------------------------------------------------------
-    let bicoEthersProvider = biconomy.ethersProvider;
+    /*  let bicoEthersProvider = biconomy.ethersProvider;
 
     let BicoProvider = biconomy.provider;
 
     const bicoContract = new ethers.Contract(
       ContractAddress[5].NftMarketPlace,
       NftMarketPlace.abi,
-      /* biconomy.ethersProvider */
+    
       bicoEthersProvider.getSigner()
     );
 
@@ -385,14 +353,14 @@ function App() {
     };
 
     await BicoProvider.send("eth_sendTransaction", [txParams]);
-
+ */
     /// -----------------------------------------------------------------------------
-    /*  let tx = await contract.saleMarketToken(
+    let tx = await contract.saleMarketToken(
       id,
       previewPriceTwo,
       ContractAddress[5].NFT
     );
-    await tx.wait(); */
+    await tx.wait();
     loadOwnNFTs();
     loadOnSaleNFTs();
   }
@@ -501,19 +469,16 @@ function App() {
 
     /// BICONOMY GASLESS TX (Fully Working)-----------------------------------------------------------
 
-    let bicoEthersProvider = biconomy.ethersProvider;
+    /*  let bicoEthersProvider = biconomy.ethersProvider;
     //provider
 
     let BicoProvider = biconomy.provider;
 
-    /* let signer = bicoEthersProvider.getSigner(); */
-
-    /* let signer = BicoProvider.getSigner(); */
 
     const bicoContract = new ethers.Contract(
       ContractAddress[5].NftMarketPlace,
       NftMarketPlace.abi,
-      /* biconomy.ethersProvider */
+    
       bicoEthersProvider.getSigner()
     );
 
@@ -532,7 +497,7 @@ function App() {
       signatureType: "EIP712_SIGN",
       // value: listingPrice,
       value: ethers.utils.parseEther("0.002")._hex,
-    };
+    }; */
 
     /*  let data = await bicoContract.populateTransaction.mintMarketToken(
       ContractAddress[5].NFT ,
@@ -561,13 +526,13 @@ function App() {
     /// -----------------------------------------------------------------------------
 
     // tx without gasless (user needs to pay for tx)
-    /*  let transaction = await signerContractMarket.mintMarketToken(
+    let transaction = await signerContractMarket.mintMarketToken(
       ContractAddress[5].NFT,
       {
         value: listingPrice,
       }
     );
-    await transaction.wait(); */
+    await transaction.wait();
   }
   const [transferHistory, setTransferHistory] = useState("");
   async function getCovalentData() {
