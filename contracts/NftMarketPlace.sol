@@ -135,12 +135,7 @@ contract NftMarketPlace is ReentrancyGuard, ERC2771Recipient, Ownable {
 
     // FUNCTIONS ------------------------------------------------------------------------------------
     /// @notice setting owner to contract deployer
-    // trusted forwarder addresses (retrieved from bico docs: https://docs.biconomy.io/misc/contract-addresses#eip-2771-contracts-trusted-forwarder)
-    // Rinkeby -> 0xFD4973FeB2031D4409fB57afEE5dF2051b171104
-    // Mainnet -> 0x84a0856b038eaAd1cC7E297cF34A7e72685A8693 -> https://github.com/bcnmy/mexa/blob/master/contracts/6/forwarder/BiconomyForwarder.sol
-    // Kovan -> 0xF82986F574803dfFd9609BE8b9c7B92f63a1410E
-    // Goerli -> 0xE041608922d06a4F26C0d4c27d8bCD01daf1f792
-    // Ropsten -> 0x3D1D6A62c588C1Ee23365AF623bdF306Eb47217A
+  
     constructor(address forwarder) {
         i_owner = payable(_msgSender());
         _setTrustedForwarder(forwarder);

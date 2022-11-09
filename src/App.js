@@ -28,9 +28,6 @@ import "bootstrap/dist/css/bootstrap.min.css";
 
 import theme from "./Components/theme/theme";
 
-/// BICONOMY
-import { Biconomy } from "@biconomy/mexa";
-
 // const {utils, BigNumber} = require('ethers');
 
 function App() {
@@ -310,11 +307,11 @@ function App() {
 
   async function sellNFT(marketItem) {
     const signer = provider.getSigner();
-    /* let contract = new ethers.Contract(
+    let contract = new ethers.Contract(
       ContractAddress[5].NftMarketPlace,
       NftMarketPlace.abi,
       signer
-    ); */
+    );
     const nftContract = new ethers.Contract(
       ContractAddress[5].NFT,
       NFT.abi,
@@ -382,9 +379,9 @@ function App() {
 
   //client used to host and upload data, endpoint infura
 
-  const projectId = process.env.REACT_APP_PORJECT_ID; // <---------- your Infura Project ID
+  const projectId = process.env.REACT_APP_PORJECT_ID_IPFS; // <---------- your Infura Project ID
 
-  const projectSecret = process.env.REACT_APP_PORJECT_SECRET; // <---------- your Infura Secret
+  const projectSecret = process.env.REACT_APP_PORJECT_SECRET_IPFS; // <---------- your Infura Secret
 
   /* const ipfsPostUrl = "https://biconomynft.infura-ipfs.io/ipfs/"; */
 
@@ -516,7 +513,7 @@ function App() {
       value: listingPrice,
     }; */
 
-    await BicoProvider.send("eth_sendTransaction", [txParams]);
+    /* await BicoProvider.send("eth_sendTransaction", [txParams]); */
 
     /* await bicoContract.mintMarketToken(ContractAddress[5].NFT, {
       value: listingPrice,
@@ -596,7 +593,6 @@ function App() {
                 changeFormInputName={changeFormInputName}
                 fileURL={fileURL}
                 createMarket={createMarket}
-                setUpBiconomy={setUpBiconomy}
               />
             }
           />
@@ -633,12 +629,7 @@ function App() {
           <Route
             exact
             path="/CrossChainTransfer"
-            element={
-              <CrossChainTransfer
-                setUpBiconomy={setUpBiconomy}
-                /* callGaslessWithdraw={callGaslessWithdraw} */
-              />
-            }
+            element={<CrossChainTransfer />}
           />
         </Routes>
         <Box></Box>
