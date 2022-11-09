@@ -31,16 +31,7 @@ module.exports = {
       // used for stand-alone hardhat network
       chainId: 1337,
     },
-    rinkeby: {
-      chainId: 4,
-      url: APP_RINKEBY_ENDPOINT,
-      accounts: [APP_PRIVATE_KEY],
-    },
-    kovan: {
-      chainId: 42,
-      url: APP_KOVAN_ENDPOINT,
-      accounts: [APP_PRIVATE_KEY],
-    },
+
     goerli: {
       chainId: 5,
       url: APP_GOERLI_ENDPOINT,
