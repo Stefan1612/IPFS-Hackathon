@@ -2,10 +2,6 @@
 
 The NFT Marketplace is currently running and fully functional on Goerli at
 
-1. NFT Market:
-
-2. NFT:
-
 The Website is online and running at [Website](https://famous-smakager-f1beb0.netlify.app/)
 
 ## Any questions? Contact me
@@ -17,7 +13,7 @@ Discord: SimpleBlock#6604
 
 ### Demo videos:
 
-NFT Marketplace: https://www.youtube.com/watch?v=zYdKS_B3RJo
+NFT Marketplace: https://www.youtube.com/watch?v=TERQfpsUPZo
 
 SKD Hyphen: https://www.youtube.com/watch?v=cViRhJu1qIM
 
