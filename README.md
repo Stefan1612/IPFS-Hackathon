@@ -1,3 +1,11 @@
+## Submission requirements
+
+Name: NFT Marketplace
+
+Email: simpleblock4@protonmail.com
+
+
+
 ## Status
 
 The NFT Marketplace is currently running and fully functional on Goerli at
@@ -44,6 +52,11 @@ A NFT Marketplace running currently on Goerli. Let's you mint, sell and buy NFT'
 This DApp allows you mint, buy and sell NFT's from the "Ape Family" contract.
 
 - NFT's uploaded to IPFS
+- How does this project make use of IPFS? - The NFT Metadata, including the image itself get uploaded on IPFS, utilizing the decentralized storage IPFS provides.
+  Where was IPFS integrated: 
+  
+ https://github.com/Stefan1612/IPFS-Hackathon-NFT-Marketplace/blob/master/src/App.js#L324-L390
+  
 - Generated Transfer History with Covalent API, ethers receipt, tokenURI
 - sell, buy with NFT Marketplace contract
 - mint, transfer and set TokenURI with NFT contract
@@ -54,9 +67,7 @@ Covalent was used to generate: [this whole section]()
 
 The actual API call
 
-## License
 
-This project is released under a GPLv3 compatible license
 
 ## Stack
 
